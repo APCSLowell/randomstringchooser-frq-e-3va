@@ -16,7 +16,7 @@ public class RandomStringChooser
   
   public String getNext() {
     if (words.size() > 0) {
-      String temp = words.get((int)(Math.random() * words.size());
+      String temp = words.get((int)(Math.random() * words.size()));
       words.remove(temp);
       return temp;
     }

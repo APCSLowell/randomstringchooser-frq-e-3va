@@ -10,7 +10,7 @@ public class RandomStringChooser
   public RandomStringChooser(String[] arr) {
     words = new ArrayList<String>();
     for(String i : arr) {
-      words.add(arr.get(i));
+      words.add(i);
     }
   }
   

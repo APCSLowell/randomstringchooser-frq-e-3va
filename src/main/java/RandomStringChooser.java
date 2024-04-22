@@ -9,7 +9,7 @@ public class RandomStringChooser
     private int valuesRemaining;
     public RandomStringChooser(String[] vals) {
         arr = new String[vals.length];
-        for(int i = 0; i < values.length; i++) {
+        for(int i = 0; i < arr.length; i++) {
             arr[i] = vals[i];
         }
         valuesRemaining = arr.length;

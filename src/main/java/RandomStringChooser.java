@@ -13,6 +13,7 @@ public class RandomStringChooser
     for(int i = 0; i < words.length; i++) {
       words[i] = arr[i];
     }
+    valuesRemaining = words.length;
   }
   
   public String getNext() {

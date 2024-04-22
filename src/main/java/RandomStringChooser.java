@@ -5,21 +5,23 @@ public class RandomStringChooser
   //Heads up! 
   //You will get a very confusing error message until you have working code in part b as well
 
-  private ArrayList<String> words;
+  private String[] words;
+  private int valuesRemaining;
   
   public RandomStringChooser(String[] arr) {
-    words = new ArrayList<String>();
-    for(String i : arr) {
-      words.add(i);
+    words = new String[arr.length];
+    for(int i = 0; i < words.length; i++) {
+      words[i] = arr[i];
     }
   }
   
   public String getNext() {
     if (words.size() > 0) {
-      // String temp = words.get((int)(Math.random() * words.size()));
-      // words.remove(temp);
-      // return temp;
-      return words.remove((int)(Math.random() * words.size()));
+      int index = (int)(Math.random()*valuesRemaining);
+      String selected = words[index];
+      words[index] = words[valuesRemaining-1];
+      valuesRemaining--;
+      return selected;
     }
     else return "NONE"; 
   }

@@ -16,13 +16,13 @@ public class RandomStringChooser
   }
   
   public String getNext() {
-    if (words.size() > 0) {
-      int index = (int)(Math.random()*valuesRemaining);
+    if (valuesRemaining == 0) {
+      return "NONE"; 
+    }
+    int index = (int)(Math.random()*valuesRemaining);
       String selected = words[index];
       words[index] = words[valuesRemaining-1];
       valuesRemaining--;
       return selected;
-    }
-    else return "NONE"; 
   }
 }
